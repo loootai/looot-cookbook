@@ -1,0 +1,82 @@
+{
+  "_about": "Every job id, endpoint id and input name the recipes use. tests/check_recipes.py checks each one against the free public catalog (GET /v1/public-catalog?capability=...). Checked 2026-09-28.",
+  "recipes": [
+    {
+      "id": "01-enrich-a-lead-list",
+      "jobs": {
+        "people.email.find": {
+          "input": ["first_name", "last_name", "domain"],
+          "endpoints": ["hunter-email-finder", "leadmagic-people-email-finder", "tomba-email-finder"]
+        },
+        "people.email.verify": {
+          "input": ["email"],
+          "endpoints": ["icypeas-email-verify", "leadmagic-email-verify", "tomba-email-verifier", "zerobounce-validate", "hunter-email-verifier", "findymail-api-verify"]
+        }
+      }
+    },
+    {
+      "id": "02-account-research-from-a-domain",
+      "jobs": {
+        "company.enrich": {
+          "input": ["domain"],
+          "endpoints": ["hunter-companies-find", "tomba-companies-find", "findymail-api-search-company", "fullenrich-api-company-lookup"]
+        },
+        "company.technographics": {
+          "input": ["domain"],
+          "endpoints": ["tomba-technology"]
+        },
+        "people.domain.search": {
+          "input": ["domain"],
+          "endpoints": ["hunter-domain-search-get", "tomba-domain-search"]
+        }
+      }
+    },
+    {
+      "id": "03-seo-and-geo-check-for-a-keyword",
+      "jobs": {
+        "google.serp.organic": {
+          "input": ["query"],
+          "endpoints": ["scrapecreators-google-search"]
+        },
+        "google.keywords.volume": {
+          "input": ["keywords", "language_code", "location_name"],
+          "endpoints": ["dataforseo-keywords-data-google-ads-search-volume-live-ai"]
+        },
+        "search.chatgpt": {
+          "input": ["q"],
+          "endpoints": ["searchapi-io-chatgpt"]
+        },
+        "search.perplexity": {
+          "input": ["q"],
+          "endpoints": ["searchapi-io-perplexity"]
+        }
+      }
+    },
+    {
+      "id": "04-web-page-to-markdown",
+      "jobs": {
+        "web.scrape.markdown": {
+          "input": ["url"],
+          "endpoints": ["jina-reader", "hyperbrowser-api-web-fetch", "context-dev-web-scrape-markdown", "steel-scrape"]
+        }
+      }
+    },
+    {
+      "id": "05-social-profile-lookup",
+      "jobs": {
+        "linkedin.person.profile": {
+          "input": ["url"],
+          "endpoints": ["scrapecreators-linkedin-profile", "icypeas-scrape-profile", "tikhub-api-linkedin-web-v2-get-user-profile"]
+        },
+        "tiktok.user.profile": {
+          "input": ["handle"],
+          "endpoints": ["scrapecreators-tiktok-profile", "scrapecreators-tiktok-user-profile", "scrapecreators-tiktok-profile-region"]
+        }
+      }
+    },
+    {
+      "id": "06-reading-receipts",
+      "jobs": {}
+    }
+  ]
+}
