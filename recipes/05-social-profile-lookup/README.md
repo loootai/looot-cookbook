@@ -17,7 +17,7 @@ send `url` or `handle`; name one directly to use it.
 ## Run it
 
 ```bash
-pip install ../looot-python
+pip install git+https://github.com/loootai/looot-python
 export LOOOT_TOKEN=cs_ms_...
 python social_lookup.py linkedin https://www.linkedin.com/in/example
 python social_lookup.py tiktok example

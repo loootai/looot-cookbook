@@ -31,7 +31,7 @@ lets looot pick the first provider whose schema accepts what you sent, so those 
 ## Run it
 
 ```bash
-pip install ../looot-python          # or the published package, once there is one
+pip install git+https://github.com/loootai/looot-python   # or `pip install looot` once released
 export LOOOT_TOKEN=cs_ms_...         # runs.execute + runs.read
 python enrich_leads.py leads.example.csv > enriched.csv
 ```

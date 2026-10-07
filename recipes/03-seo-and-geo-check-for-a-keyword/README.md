@@ -29,7 +29,7 @@ domain instead of reading one fixed field.
 ## Run it
 
 ```bash
-pip install ../looot-python
+pip install git+https://github.com/loootai/looot-python
 export LOOOT_TOKEN=cs_ms_...
 python seo_geo_check.py "email verification api" example.com
 python seo_geo_check.py "email verification api" example.com --no-volume

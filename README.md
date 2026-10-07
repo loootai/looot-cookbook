@@ -5,8 +5,8 @@ operations with one token and one prepaid balance. Each recipe names the real jo
 ids and input names it uses, as the public catalog lists them. `tests/check_recipes.py` checks
 every one of those names against the live catalog, so a recipe cannot quietly drift.
 
-> Status: private and unpublished. Recipes use the local `looot-js` and `looot-python` repos
-> until those are released.
+> Status: public, MIT. Recipes install `looot-js` and `looot` (Python) from GitHub until both are
+> on npm and PyPI.
 
 | # | Recipe | Jobs | Cost per run | Code |
 | --- | --- | --- | --- | --- |
@@ -24,11 +24,10 @@ through Claude Code, Cursor, Codex or any other MCP client.
 
 ```bash
 # TypeScript recipes
-(cd ../looot-js && npm install && npm run build)
-npm install                                   # links ../looot-js
+npm install --ignore-scripts=false            # builds looot-js from GitHub
 
 # Python recipes
-python3 -m venv .venv && .venv/bin/pip install ../looot-python
+python3 -m venv .venv && .venv/bin/pip install git+https://github.com/loootai/looot-python
 ```
 
 ## 60-second quickstart
@@ -63,4 +62,4 @@ bash scripts/leak-scan.sh .
 
 ## License
 
-Proprietary, all rights reserved. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).

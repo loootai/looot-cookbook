@@ -1,7 +1,6 @@
 {
   "name": "looot-cookbook",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
   "description": "Runnable recipes for the looot API and MCP server.",
   "scripts": {
@@ -9,10 +8,14 @@
     "scan": "bash scripts/leak-scan.sh ."
   },
   "dependencies": {
-    "looot-js": "file:../looot-js"
+    "looot-js": "github:loootai/looot-js#09d843ed22df723cecbba17cf52fde9147aea765"
   },
   "engines": {
     "node": ">=22.18"
   },
-  "license": "SEE LICENSE IN LICENSE"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loootai/looot-cookbook.git"
+  }
 }

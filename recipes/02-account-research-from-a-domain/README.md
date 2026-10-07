@@ -29,7 +29,7 @@ Then print each `result`. Provider shapes differ, so the script prints them as t
 ## Run it
 
 ```bash
-npm install                        # installs ../looot-js
+npm install --ignore-scripts=false   # builds looot-js from GitHub
 export LOOOT_TOKEN=cs_ms_...
 node account-research.ts example.com
 ```
