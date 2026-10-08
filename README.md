@@ -5,6 +5,15 @@ operations with one token and one prepaid balance. Each recipe names the real jo
 ids and input names it uses, as the public catalog lists them. `tests/check_recipes.py` checks
 every one of those names against the live catalog, so a recipe cannot quietly drift.
 
+## Install for agents
+
+```bash
+git clone https://github.com/loootai/looot-cookbook
+claude mcp add --transport http looot https://api.looot.ai/mcp
+```
+
+See also: [awesome-looot-use-cases](https://github.com/loootai/awesome-looot-use-cases) (copy-paste recipes) and [awesome-gtm](https://github.com/loootai/awesome-gtm) (open-source GTM tools).
+
 > Status: public, MIT. Recipes install `looot-js` and `looot` (Python) from GitHub until both are
 > on npm and PyPI.
 
