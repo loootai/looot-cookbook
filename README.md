@@ -1,4 +1,8 @@
+<p align="center"><img src="assets/hero.png" alt="looot-cookbook: Runnable recipes for real data jobs" width="100%"></p>
+
 # looot cookbook
+
+[![License](https://img.shields.io/github/license/loootai/looot-cookbook)](LICENSE) [![Docs](https://img.shields.io/badge/docs-docs.looot.ai-12A06A)](https://docs.looot.ai)
 
 Short, runnable recipes for [looot](https://looot.ai): one gateway to about 2,500 data provider
 operations with one token and one prepaid balance. Each recipe names the real job ids, endpoint
